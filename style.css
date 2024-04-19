@@ -1,0 +1,79 @@
+/*selectores de etiqueta*/
+body, html{
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+/*selectores de clase*/
+.wrapper{
+    /*dimensiones*/
+    max-width: 980px;
+    margin: 0 auto; 
+    /*comportamiento en grillas*/
+    display: grid;
+    /*cantidad de columnas y dimensiones*/
+    grid-template-columns: repeat(5, 1fr);
+    /*cantidad de filas*/
+    grid-template-rows: 10vh 75vh 10vh;
+    /*dimensiones de las calles*/
+    gap: 10px;
+}
+
+/*header*/
+.nav, .nav ul{
+    /*geometria del contenedor*/
+    padding: 0;
+    margin: 0;
+    /*comportamiento en grillas*/
+    display: grid;
+    /*cantidad de columnas y dimensiones*/
+    grid-template-columns: repeat(5,1fr);
+    /*cantidad de filas*/
+    grid-template-rows: 1fr;
+    /*columnas que se ocupan*/
+    grid-column-start: 1;
+    grid-column-end: 6;
+    /*valor de caminos verticales*/
+    gap: 10px;
+    /*color de fondo*/
+    background-color: #333;
+}
+
+/*menu navegacion*/
+.nav ul li {
+    /*geometria del contenedor*/
+    padding: 0;
+    margin: 0;
+    /*comportamiento en flex*/
+    display: flex;
+    /*elimina el estilo de la lista*/
+    list-style: none;
+    /*centra horizontalmente los elementos*/
+    justify-content: center;
+    /* centra verticalmente el elemento */ 
+    align-items: center;
+}
+
+/*elementos menu*/
+.nav ul li a{
+    /*elimina el subrayado de enlace*/
+    text-decoration: none;
+    color: beige;
+}
+
+header ul li:nth-child(1){
+    /*posicionamiento del elemento 1*/
+    grid-column: 1;
+}
+
+footer ul li:nth-child(1){
+    /*donde posiciona en el grid?*/
+    grid-column: 2; /*es el número de la columna exacta*/
+}
+
+
+
+
+
+
