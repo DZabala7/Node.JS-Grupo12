@@ -19,7 +19,7 @@ body, html{
     /*comportamiento en grillas*/
     display: grid;
     /*cantidad de columnas y dimensiones*/
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     /*cantidad de filas*/
     grid-template-rows: 10vh 75vh 10vh;
     /*dimensiones de las calles*/
@@ -34,12 +34,12 @@ body, html{
     /*comportamiento en grillas*/
     display: grid;
     /*cantidad de columnas y dimensiones*/
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     /*cantidad de filas*/
     grid-template-rows: 1fr;
     /*columnas que se ocupan*/
     grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-end: 7;
     /*valor de caminos verticales*/
     gap: 10px;
     /*color de fondo*/
@@ -68,6 +68,11 @@ body, html{
     color: white;
 }
 
+.logo img {
+    height: 2rem; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantén la proporción */
+}
+
 header ul li:nth-child(1){
     /*posicionamiento del elemento 1*/
     grid-column: 1;
@@ -75,7 +80,7 @@ header ul li:nth-child(1){
 
 footer ul li:nth-child(1){
     /*posicionamiento del elemento 1*/
-    grid-column: 2; /*es el número de la columna exacta*/
+    grid-column: 3;
 }
 
 
