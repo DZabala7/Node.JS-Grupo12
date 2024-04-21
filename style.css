@@ -5,8 +5,14 @@ body, html{
     font-family: Arial, Helvetica, sans-serif;    
 }
 
+.background-wrapper {
+    background-image: url('/img/background.png'); /* Imagen de fondo */
+    background-size: cover; /* Cubrir todo el espacio */
+    background-position: center; /* Centrar la imagen */
+  }
+
 /*selectores de clase*/
-.wrapper{
+.container{
     /*dimensiones*/
     max-width: 980px;
     margin: 0 auto; 
@@ -28,7 +34,7 @@ body, html{
     /*comportamiento en grillas*/
     display: grid;
     /*cantidad de columnas y dimensiones*/
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     /*cantidad de filas*/
     grid-template-rows: 1fr;
     /*columnas que se ocupan*/
@@ -37,7 +43,7 @@ body, html{
     /*valor de caminos verticales*/
     gap: 10px;
     /*color de fondo*/
-    background-color: #333;
+    background-color: black;
 }
 
 /*menu navegacion*/
@@ -59,7 +65,7 @@ body, html{
 .nav ul li a{
     /*elimina el subrayado de enlace*/
     text-decoration: none;
-    color: beige;
+    color: white;
 }
 
 header ul li:nth-child(1){
@@ -68,10 +74,9 @@ header ul li:nth-child(1){
 }
 
 footer ul li:nth-child(1){
-    /*donde posiciona en el grid?*/
+    /*posicionamiento del elemento 1*/
     grid-column: 2; /*es el número de la columna exacta*/
 }
-
 
 
 
