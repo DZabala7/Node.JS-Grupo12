@@ -18,23 +18,41 @@ function enviarEmail() {
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "iarajfares@gmail.com",
-        Password : "89CACC625AE22F9E4424B00435152F919A6F",
+        Password : "3F287AD6100AE0A3010A05FEEC0C457410C9",
         To : 'iarajfares@gmail.com',
         From : email.value,
         Subject : asunto.value,
         Body : mensaje
     }).then(
-      message => {
-        if (message == 'OK') {
-            Swal.fire({
-                title: "Enviado!",
-                text: "Nos pondremos en contacto con usted a la brevedad. Gracias por su paciencia!",
-                icon: "success"
-              }
-            );
+        message => {
+            if (message == 'OK') {
+                Swal.fire({
+                    title: "Enviado!",
+                    text: "Nos pondremos en contacto con usted a la brevedad. Gracias por su paciencia!",
+                    icon: "success"
+                }
+                );
+            }
         }
-      }
     );
+}
+function verificarEmail() {
+    const expRegular = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+    let emailInvalido = document.querySelector('.requerido.email');
+    if (!email.value.match(expRegular)) {
+        email.classList.add('error');
+        email.parentElement.classList.add('error');
+
+        if (email.value != "") {
+            emailInvalido.innerText = 'Ingrese un correo electrónico válido.'
+        } else {
+            emailInvalido.innerText = '* Correo electronico es obligatorio'
+        }
+        
+    } else {
+        email.classList.remove('error');
+        email.parentElement.classList.remove('error');
+    }
 }
 
 function verificarCampos() {
@@ -45,6 +63,14 @@ function verificarCampos() {
             item.classList.add("error");
             item.parentElement.classList.add("error");
         }
+
+        if (items[1].value != "") {
+            verificarEmail();
+        }
+
+        items[1].addEventListener("keyup", () => {
+            verificarEmail();
+        });
 
         item.addEventListener("keyup", () => {
             if (item.value != "") {
@@ -57,19 +83,21 @@ function verificarCampos() {
         })
     }
 }
-function verificarEmail() {
-    const expRegular = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
-    if (!email.value.match(expRegular)) {
-        email.classList.add('error');
-        email.parentElement.classList.add('error');
-    } else {
-        email.classList.remove('error');
-        email.parentElement.classList.remove('error');
-    }
-}
 
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     verificarCampos();
-    // enviarEmail();
-} )
+    function sinErrores() {
+        return !nombre.classList.contains("error") &&
+                !email.classList.contains("error") &&
+                !telefono.classList.contains("error") &&
+                !asunto.classList.contains("error") &&
+                !mensaje.classList.contains("error");
+    }
+    console.log(sinErrores());
+    if (sinErrores()){
+        enviarEmail();
+        formulario.reset();
+        return false
+    }
+})
