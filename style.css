@@ -6,27 +6,27 @@ body, html{
 }
 
 .background-wrapper {
-    background-image: url('/img/background.png'); /* Imagen de fondo */
-    background-size: cover; /* Cubrir todo el espacio */
-    background-position: center; /* Centrar la imagen */
+    background-image: url('/img/background.png'); /*imagen de fondo*/
+    background-size: cover; /*cubrir todo el espacio*/
+    background-position: center; /*centrar la imagen*/
   }
 
 /*selectores de clase*/
 .container{
     /*dimensiones*/
-    max-width: 980px;
+    max-width: 100%;
     margin: 0 auto; 
     /*comportamiento en grillas*/
     display: grid;
     /*cantidad de columnas y dimensiones*/
     grid-template-columns: repeat(6, 1fr);
     /*cantidad de filas*/
-    grid-template-rows: 10vh 75vh 10vh;
+    grid-template-rows: 10vh 75vh 15vh;
     /*dimensiones de las calles*/
-    gap: 10px;
+    gap: 1vh;
 }
 
-/*header*/
+/*header y footer*/
 .nav, .nav ul{
     /*geometria del contenedor*/
     padding: 0;
@@ -41,12 +41,12 @@ body, html{
     grid-column-start: 1;
     grid-column-end: 7;
     /*valor de caminos verticales*/
-    gap: 10px;
+    gap: 1vh;
     /*color de fondo*/
     background-color: black;
 }
 
-/*menu navegacion*/
+/*menu navegacion header y footer*/
 .nav ul li {
     /*geometria del contenedor*/
     padding: 0;
@@ -61,29 +61,44 @@ body, html{
     align-items: center;
 }
 
-/*elementos menu*/
+/*elementos menu header*/
 .nav ul li a{
     /*elimina el subrayado de enlace*/
     text-decoration: none;
     color: white;
 }
 
+.header {
+    /*sombra para el header*/
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+.header a:hover {
+    /*cambia el color al pasar el mouse*/
+    color: blue;
+  }
+
+/*imagen logo del header*/
 .logo img {
-    height: 2rem; /* Ajusta el tamaño del logo */
-    width: auto; /* Mantén la proporción */
+    height: 2rem; /*ajusta el tamaño del logo*/
+    width: auto; /*mantiene la proporción*/
 }
 
 header ul li:nth-child(1){
     /*posicionamiento del elemento 1*/
     grid-column: 1;
 }
-
-footer ul li:nth-child(1){
-    /*posicionamiento del elemento 1*/
-    grid-column: 3;
-}
-
-
-
-
-
+  
+  .footer ul {
+    display: flex;
+    flex-direction: column; /*alinea elementos verticalmente*/
+    align-items: center; /*centra los elementos horizontalmente*/
+    justify-content: center; /*centra los elementos dentro de la lista verticalmente*/
+  }
+  
+  .footer ul li {
+    text-align: center; /*centra el texto*/
+    color:white; /*color del texto*/
+  }
+  
+  
