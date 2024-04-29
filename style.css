@@ -102,3 +102,9 @@ header ul li:nth-child(1){
   }
   
   
+
+footer ul li:nth-child(1){
+    /*donde posiciona en el grid?*/
+    grid-column: 2; /*es el número de la columna exacta*/
+}
+

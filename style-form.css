@@ -1,0 +1,119 @@
+/* variables */
+:root {
+    --color-primario: #333;
+    --color-secundario: #ededed;
+    --color-bordes: #0ef;
+    --color-error: #d93025;
+    --imagen: url('./img/logo.png');
+}
+
+/* formulario de contacto */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100hv;
+    background-color: var(--color-primario);
+}
+.imagen-fondo {
+    background: var(--imagen) no-repeat center;
+}
+
+.contacto h2 {
+    font-size: 40px;
+    color: var(--color-secundario);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contacto form {
+    width: 600px;
+    text-align: center;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box .input-field {
+    width: 48.5%;
+
+}
+
+.field .item {
+    width: 100%;
+    padding: 18px;
+    background: #515151b8;
+    border: 2px solid var(--color-bordes);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: var(--color-secundario);
+    margin: 12px 0;
+}
+.field.error .item {
+    border-color: var(--color-error);
+}
+.textarea-field .item {
+    resize: none;
+}
+.field .item::placeholder {
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.field .requerido {
+    font-size: 14.5px;
+    color: var(--color-error);
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+.field.error .requerido {
+    display: block;
+
+}
+
+.field .textarea-field .requerido {
+    margin-top: -10px;
+}
+
+form button {
+    margin: 1rem;
+    padding: 12px 32px;
+    background: var(--color-bordes);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px var(--color-bordes);
+    font-size: 16px;
+    color: var(--color-primario);
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+form button:hover {
+    box-shadow: none;
+}
+.volver {
+    color: var(--color-secundario);
+    background: #333;
+    border:1px solid var(--color-secundario);
+    box-shadow: none;
+}
+.volver a{
+    text-decoration: none;
+}
+.volver a:visited {
+    text-decoration: none;
+    color: var(--color-secundario);
+}
