@@ -25,6 +25,9 @@ body {
 .imagen-fondo {
     background: var(--imagen) no-repeat center;
 }
+.contacto {
+    margin-top: 1rem;
+}
 
 .contacto h2 {
     font-size: 40px;
