@@ -1,0 +1,309 @@
+/* variables */
+:root {
+    --color-primario: #333;
+    --color-secundario: #ededed;
+    --color-bordes: #0ef;
+    --color-error: #d93025;
+    --imagen: url('./img/logo.png');
+}
+
+/* formulario de contacto */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+    background-color: var(--color-primario);
+}
+
+.imagen-fondo {
+    background: var(--imagen) no-repeat center;
+}
+
+.contacto {
+    margin-top: 1rem;
+}
+
+.contacto h2 {
+    font-size: 40px;
+    color: var(--color-secundario);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contacto form {
+    width: 600px;
+    text-align: center;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box .input-field {
+    width: 48.5%;
+
+}
+
+.field .item {
+    width: 100%;
+    padding: 18px;
+    background: #515151b8;
+    border: 2px solid var(--color-bordes);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: var(--color-secundario);
+    margin: 12px 0;
+}
+
+.field.error .item {
+    border-color: var(--color-error);
+}
+
+.textarea-field .item {
+    resize: none;
+}
+
+.field .item::placeholder {
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.field .requerido {
+    font-size: 14.5px;
+    color: var(--color-error);
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+.field.error .requerido {
+    display: block;
+
+}
+
+.field .textarea-field .requerido {
+    margin-top: -10px;
+}
+
+form button {
+    margin: 1rem;
+    padding: 12px 32px;
+    background: var(--color-bordes);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px var(--color-bordes);
+    font-size: 16px;
+    color: var(--color-primario);
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+form button:hover {
+    box-shadow: none;
+}
+
+.volver {
+    color: var(--color-secundario);
+    background: #333;
+    border: 1px solid var(--color-secundario);
+    box-shadow: none;
+}
+
+.volver a {
+    text-decoration: none;
+}
+
+.volver a:visited {
+    text-decoration: none;
+    color: var(--color-secundario);
+}
+
+/* PAGE - PS3 */
+.body-page-ps3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-pagina {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.titulo-pagina a {
+    color: #ffffff;
+    margin-left: 1rem;
+}
+
+.inicio {
+    margin: 0 1rem;
+    position: absolute;
+    left: 0;
+}
+.main-game-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px;
+
+}
+
+.game-grid {
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.game-grid img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+
+}
+
+.informacion-juego {
+    padding: 0.5em;
+}
+
+.informacion-juego h2 {
+    color: #232222;
+}
+
+.informacion-juego p {
+    color: rgb(157, 150, 150);
+    font-size: small;
+}
+
+.informacion-juego span {
+    color: #6f6f6f;
+    font-weight: 900;
+}
+
+#item-0 {
+    background-color: #ffffff;
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    grid-row-end: 2;
+    grid-column-end: 3;
+    box-shadow: 0 0 10px #0ef;
+    display: flex;
+    flex-direction: column;
+}
+
+#item-1 {
+
+    background-color: #ffffff;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 2;
+    grid-column-end: 4;
+    box-shadow: 0 0 10px #0ef;
+    display: flex;
+    flex-direction: column;
+}
+
+#item-2 {
+
+    background-color: #ffffff;
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-row-end: 2;
+    grid-column-end: 5;
+    box-shadow: 0 0 10px #0ef;
+    display: flex;
+    flex-direction: column;
+}
+
+#item-3 {
+
+    background-color: #ffff;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-column-end: 3;
+    box-shadow: 0 0 10px #0ef;
+    display: flex;
+    flex-direction: column;
+}
+
+#item-4 {
+
+    background-color: #ffffff;
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-row-end: 3;
+    grid-column-end: 4;
+    box-shadow: 0 0 10px #0ef;
+    display: flex;
+    flex-direction: column;
+}
+
+#item-5 {
+
+    background-color: #ffffff;
+    grid-row-start: 2;
+    grid-column-start: 4;
+    grid-row-end: 3;
+    grid-column-end: 5;
+    box-shadow: 0 0 10px #0ef;
+    display: flex;
+    flex-direction: column;
+}
+
+#item-6 {
+
+    background-color: #ffffff;
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-row-end: 4;
+    grid-column-end: 3;
+    box-shadow: 0 0 10px #0ef;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#item-7 {
+
+    background-color: #ffffff;
+    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-row-end: 4;
+    grid-column-end: 4;
+    box-shadow: 0 0 10px #0ef;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#item-8 {
+
+    background-color: #ffffff;
+    grid-row-start: 3;
+    grid-column-start: 4;
+    grid-row-end: 4;
+    grid-column-end: 5;
+    box-shadow: 0 0 10px #0ef;
+    display: flex;
+    flex-direction: column;
+}
