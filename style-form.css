@@ -7,6 +7,50 @@
     --imagen: url('./img/logo.png');
 }
 
+/* header */
+.container{
+
+    width: 100%;
+    margin: 0; 
+}
+.nav,
+.nav ul {
+
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background-color: black;
+}
+.nav ul li {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.header {
+    height: 65px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header a:hover {
+    color: var(--color-bordes);
+    transition: 0.4s ease;
+}
+.logo img {
+    height: 2rem;
+    width: auto; 
+}
+
 /* formulario de contacto */
 * {
     padding: 0;
@@ -17,6 +61,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-width: 100vh;
@@ -24,6 +69,7 @@ body {
 }
 
 .imagen-fondo {
+    margin: 10rem;
     background: var(--imagen) no-repeat center;
 }
 
@@ -156,7 +202,9 @@ form button:hover {
     position: absolute;
     left: 0;
 }
+
 .main-game-grid {
+    margin-bottom: 5rem;
     display: grid;
     width: 100%;
     height: 100%;
@@ -306,4 +354,14 @@ form button:hover {
     box-shadow: 0 0 10px #0ef;
     display: flex;
     flex-direction: column;
+}
+
+/* footer */
+.nav.footer {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6f6f6f;
 }
