@@ -11,18 +11,15 @@ function enviarEmail() {
     Nombre: ${nombre.value}<br>
     Email: ${email.value}<br>
     Telefono: ${telefono.value}<br>
-    Email: ${email.value}<br>
     Asunto: ${asunto.value}<br>
     Consulta: ${consulta.value} 
     `
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "iarajfares@gmail.com",
-        Password : "3F287AD6100AE0A3010A05FEEC0C457410C9",
-        To : 'iarajfares@gmail.com',
-        From : email.value,
-        Subject : asunto.value,
-        Body : mensaje
+        SecureToken: "afdad806-a4e2-4fee-9810-967eef140986",
+        To: 'iarajfares@gmail.com',
+        From: 'iarajfares@gmail.com',
+        Subject: asunto.value,
+        Body: mensaje
     }).then(
         message => {
             if (message == 'OK') {
@@ -48,7 +45,7 @@ function verificarEmail() {
         } else {
             emailInvalido.innerText = '* Correo electronico es obligatorio'
         }
-        
+
     } else {
         email.classList.remove('error');
         email.parentElement.classList.remove('error');
@@ -89,15 +86,22 @@ formulario.addEventListener("submit", (e) => {
     verificarCampos();
     function sinErrores() {
         return !nombre.classList.contains("error") &&
-                !email.classList.contains("error") &&
-                !telefono.classList.contains("error") &&
-                !asunto.classList.contains("error") &&
-                !mensaje.classList.contains("error");
+            !email.classList.contains("error") &&
+            !telefono.classList.contains("error") &&
+            !asunto.classList.contains("error") &&
+            !mensaje.classList.contains("error");
     }
     console.log(sinErrores());
-    if (sinErrores()){
+    if (sinErrores()) {
         enviarEmail();
         formulario.reset();
         return false
+    } else {
+        console.log('error')
+        Swal.fire({
+            title: "Error!",
+            text: "No se pudo enviar su mensaje.",
+            icon: "error"
+        });
     }
 })

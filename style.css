@@ -1,3 +1,9 @@
+:root {
+  --color-primario: #333;
+  --color-secundario: #ededed;
+  --color-bordes: #0ef;
+  --color-error: #d93025;
+}
 /*selectores de etiqueta*/
 body, html{
     margin:0;
@@ -75,7 +81,8 @@ body, html{
 
 .header a:hover {
     /*cambia el color al pasar el mouse*/
-    color: blue;
+    color: var(--color-bordes);
+    transition: 0.4s ease;
   }
 
 /*imagen logo del header*/
