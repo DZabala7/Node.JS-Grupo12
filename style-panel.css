@@ -66,3 +66,48 @@ table {
    max-width: 200%;
    align-items: center;
 }
+
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  #form p {
+    text-align: center;
+  }
+  
+  #form label {
+    font-size: 30px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: grey;
+  }
+  
+  .alineacionF{
+    text-align: left;
+  }
+
+  /* Muestra el bloque de la calificación en espejo. por ello se procede a dar las siguientes instrucciones para que la alineación del bloque de texto (estrellas este alineado y se corresponda con lo que se observa) */
+  .calificaciones {
+    /* La propiedad direction se utiliza para indicar en que dirección fluye el bloque de texto. (Las estrellas del formulario se muestran en espejo, por ende, tendre que poner los valores opuestos)*/
+    direction: rtl;     /* Como por defecto es 'ltr', y yo quiero que la dirección fluya de derecha a izquierda, la cambio a 'rtl' */
+    /* En otras palabras, me sirve para que cuando seleccione la calificación, lo haga de DER a IZQ */
+
+    /* Como por defecto, la alinación del bloque estará a la derecha, tengo que forzar que se posicione a la izquierda*/
+    unicode-bidi: bidi-override;   /* La propiedad 'unicode-bidi' permite controlar cómo se debe tratar el bloque */
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
