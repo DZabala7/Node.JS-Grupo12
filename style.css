@@ -180,6 +180,7 @@ header ul li:nth-child(1) {
 
 /* CONTACTO PAG PRINCIPAL */
 .contacto_redirect {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
