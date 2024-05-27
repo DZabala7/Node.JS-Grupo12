@@ -1,104 +1,166 @@
-/*selectores de etiqueta*/
-body, html{
-    margin:0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;    
+/* Selectores de etiqueta */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;    
 }
 
 .background-wrapper {
-    background-image: url('/img/background.png'); /*imagen de fondo*/
-    background-size: cover; /*cubrir todo el espacio*/
-    background-position: center; /*centrar la imagen*/
-  }
-
-/*selectores de clase*/
-.container{
-    /*dimensiones*/
-    max-width: 100%;
-    margin: 0 auto; 
-    /*comportamiento en grillas*/
-    display: grid;
-    /*cantidad de columnas y dimensiones*/
-    grid-template-columns: repeat(6, 1fr);
-    /*cantidad de filas*/
-    grid-template-rows: 10vh 75vh 15vh;
-    /*dimensiones de las calles*/
-    gap: 1vh;
+  background-image: url('img/background.png'); /* Imagen de fondo */
+  background-size: cover; /* Cubrir todo el espacio */
+  background-position: center; /* Centrar la imagen */
 }
 
-/*header y footer*/
-.nav, .nav ul{
-    /*geometria del contenedor*/
-    padding: 0;
-    margin: 0;
-    /*comportamiento en grillas*/
-    display: grid;
-    /*cantidad de columnas y dimensiones*/
-    grid-template-columns: repeat(6, 1fr);
-    /*cantidad de filas*/
-    grid-template-rows: 1fr;
-    /*columnas que se ocupan*/
-    grid-column-start: 1;
-    grid-column-end: 7;
-    /*valor de caminos verticales*/
-    gap: 1vh;
-    /*color de fondo*/
-    background-color: black;
+/* Selectores de clase */
+.container {
+  /* Dimensiones */
+  max-width: 100%;
+  margin: 0 auto; 
+  /* Comportamiento en grillas */
+  display: grid;
+  /* Cantidad de columnas y dimensiones */
+  grid-template-columns: repeat(6, 1fr);
+  /* Cantidad de filas */
+  grid-template-rows: 10vh 150vh 10vh;
+  /* Dimensiones de las calles */
+  gap: 1vh;
 }
 
-/*menu navegacion header y footer*/
+/* Header y footer */
+.nav, .nav ul {
+  /* Geometría del contenedor */
+  padding: 0;
+  margin: 0;
+  /* Comportamiento en grillas */
+  display: grid;
+  /* Cantidad de columnas y dimensiones */
+  grid-template-columns: repeat(6, 1fr);
+  /* Cantidad de filas */
+  grid-template-rows: 1fr;
+  /* Columnas que se ocupan */
+  grid-column-start: 1;
+  grid-column-end: 7;
+  /* Valor de caminos verticales */
+  gap: 1vh;
+  /* Color de fondo */
+  background-color: black;
+}
+
+/* Menú navegación header y footer */
 .nav ul li {
-    /*geometria del contenedor*/
-    padding: 0;
-    margin: 0;
-    /*comportamiento en flex*/
-    display: flex;
-    /*elimina el estilo de la lista*/
-    list-style: none;
-    /*centra horizontalmente los elementos*/
-    justify-content: center;
-    /* centra verticalmente el elemento */ 
-    align-items: center;
+  /* Geometría del contenedor */
+  padding: 0;
+  margin: 0;
+  /* Comportamiento en flex */
+  display: flex;
+  /* Elimina el estilo de la lista */
+  list-style: none;
+  /* Centra horizontalmente los elementos */
+  justify-content: center;
+  /* Centra verticalmente el elemento */ 
+  align-items: center;
 }
 
-/*elementos menu header*/
-.nav ul li a{
-    /*elimina el subrayado de enlace*/
-    text-decoration: none;
-    color: white;
+/* Elementos menú header */
+.nav ul li a {
+  /* Elimina el subrayado de enlace */
+  text-decoration: none;
+  color: white;
 }
 
 .header {
-    /*sombra para el header*/
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  }
+  /* Sombra para el header */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
 
 .header a:hover {
-    /*cambia el color al pasar el mouse*/
-    color: blue;
-  }
+  /* Cambia el color al pasar el mouse */
+  color: blue;
+}
 
-/*imagen logo del header*/
+/* Imagen logo del header */
 .logo img {
-    height: 2rem; /*ajusta el tamaño del logo*/
-    width: auto; /*mantiene la proporción*/
+  height: 2rem; /* Ajusta el tamaño del logo */
+  width: auto; /* Mantiene la proporción */
 }
 
-header ul li:nth-child(1){
-    /*posicionamiento del elemento 1*/
-    grid-column: 1;
+header ul li:nth-child(1) {
+  /* Posicionamiento del elemento 1 */
+  grid-column: 1;
 }
-  
-  .footer ul {
-    display: flex;
-    flex-direction: column; /*alinea elementos verticalmente*/
-    align-items: center; /*centra los elementos horizontalmente*/
-    justify-content: center; /*centra los elementos dentro de la lista verticalmente*/
-  }
-  
-  .footer ul li {
-    text-align: center; /*centra el texto*/
-    color:white; /*color del texto*/
-  }
-  
-  
+
+.footer ul {
+  display: flex;
+  flex-direction: column; /* Alinea elementos verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos dentro de la lista verticalmente */
+}
+
+.footer ul li {
+  text-align: center; /* Centra el texto */
+  color: white; /* Color del texto */
+}
+
+.main{
+  padding: 0;
+  margin: 0;
+  /* Comportamiento en grillas */
+  display: grid;
+  /* Cantidad de columnas y dimensiones */
+  grid-template-columns: 1 1fr;
+  /* Cantidad de filas */
+  grid-template-rows: 3fr;
+  /* Columnas que se ocupan */
+  grid-column-start: 1;
+  grid-column-end: 7;
+  /* Valor de caminos verticales */
+  gap: 1vh;
+  /* Color de fondo */
+}
+
+/* Estilos para el contenedor de juegos */
+.juegos-container {
+  display: flex; /* Cambiado de grid a flex */
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en varias filas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.juego {
+  flex: 0 0 calc((100% / 3) - 1.25rem); /* Ancho de una tarjeta normal */
+  max-width: calc((100% / 3) - 1.25rem); /* Ancho máximo */
+  margin: 0.625rem; /* Margen entre las tarjetas */
+  padding: 1.25rem; /* Espacio interno de la tarjeta */
+  text-align: center; /* Centra el contenido */
+  background-color: white; /* Fondo blanco para cada tarjeta */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0rem 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.juego.first-card {
+  flex: 0 0 calc(((100% / 3) * 2) + 1.25rem); /* Ancho de dos tarjetas normales más un margen */
+  max-width: calc(((100% / 3) * 2) + 1.25rem); /* Ancho máximo */
+  margin-right: 0.625rem; /* Añade un margen a la derecha para compensar el margen entre tarjetas */
+}
+
+/* Estilos para la imagen dentro de cada tarjeta de juego */
+.juego img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+  height: 9.365rem; /* Altura fija para las imágenes */
+  object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarse */
+  border-radius: 0.5rem; /* Bordes redondeados */
+}
+
+/* Estilos para el texto dentro de cada tarjeta de juego */
+.juego h2 {
+  margin: 0; /* Elimina el margen superior e inferior del título */
+}
+
+/* Estilos para el contenido emergente al pasar el ratón sobre cada tarjeta de juego */
+.card-hover {
+  display: none; /* Oculta por defecto */
+}
+
+.juego:hover .card-hover {
+  display: block; /* Muestra al pasar el ratón */
+}
+
