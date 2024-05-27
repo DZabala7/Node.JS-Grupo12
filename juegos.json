@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "nombre": "Prince of Persia: The Lost Crown",
+        "imagen": "juego1.jpg",
+        "descripcion": "Fantasía",
+        "resena": "Puntaje: 9.5",
+        "infoAdicional": "PlayStation, Xbox, PC y Nintendo Switch"
+    },
+    {
+        "id": 2,
+        "nombre": "Tekken 8",
+        "imagen": "juego2.jpg",
+        "descripcion": "Lucha",
+        "resena": "Puntaje: 9",
+        "infoAdicional": "PS5, Xbox Series X/S, PC y Nintendo Switch"
+    },
+    {   "id": 3,
+        "nombre": "Mario vs. Donkey Kong",
+        "imagen": "juego3.jpg",
+        "descripcion": "Familiar",
+        "resena": "Puntaje: 8.5",
+        "infoAdicional": "Nintendo Switch"
+    },
+    {   "id": 4,
+        "nombre": "Skull and Bones",
+        "imagen": "juego4.png",
+        "descripcion": "Cooperativo",
+        "resena": "Puntaje: 8",
+        "infoAdicional": "PC, PS5 y Xbox Series X/S"
+
+    },
+    {   "id": 5,
+        "nombre": "Final Fantasy 7 Rebirth",
+        "imagen": "juego5.jpg",
+        "descripcion": "Mundo abierto",
+        "resena": "Puntaje: 7.5",
+        "infoAdicional": "PS5"
+
+    }
+]
