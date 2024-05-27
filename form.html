@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="nav header">
+            <ul>
+                <li class="logo"><a href="index.html" target="_self"><img src="img/logo.png" alt="GameStation Logo"></a>
+                </li>
+                <li><a href="page-p3.html">PS3</a></li>
+                <li><a href="#">PS4</a></li>
+                <li><a href="#">PS5</a></li>
+                <li><a href="">PS PLUS</a></li>
+                <!-- <li><a href="">OFERTAS</a></li> -->
+                <li><a href="form.html">CONTACTO</a></li>
+            </ul>
+        </header>
+    </div>
+    <section class="imagen-fondo">
+        <section class="contacto">
+            <h2>Contactanos</h2>
+            <form action="#">
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" class="item error" placeholder="Nombre" id="nombre" class="item"
+                            autocomplete="off">
+                        <div class="requerido">* Nombre es obligatorio </div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" class="item error" placeholder="Correo Electronico" id="email" class="item"
+                            autocomplete="off">
+                        <div class="requerido email">* Correo electronico es obligatorio</div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" class="item error" placeholder="Telefono" id="telefono" class="item"
+                            autocomplete="off">
+                        <div class="requerido">* Telefono es obligatorio</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Asunto" id="asunto" class="item error" autocomplete="off">
+                        <div class="requerido">* Asunto es obligatorio</div>
+                    </div>
+                </div>
+                <div class="textarea-field field">
+                    <div class="input-field field">
+                        <textarea name="Mensaje" class="item error" placeholder="Mensaje" id="mensaje"
+                            rows="5"></textarea>
+                        <div class="requerido">* Mensaje es obligatorio</div>
+                    </div>
+                </div>
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+                <div>
+                    <button class="volver"><a href="index.html">Volver</a></button>
+                </div>
+            </form>
+            <script src="script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+        </section>
+    </section>
+</body>
+<footer class="nav footer">
+    <div>
+        <p>2024 © GameStation Argentina</p>
+    </div>
+</footer>
+</html>
