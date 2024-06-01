@@ -1,8 +1,14 @@
+:root {
+  --color-primario: #333;
+  --color-secundario: #ededed;
+  --color-bordes: #0ef;
+  --color-error: #d93025;
+}
 /* Selectores de etiqueta */
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;    
+  font-family: 'Josefin Sans', sans-serif;    
 }
 
 .background-wrapper {
@@ -21,7 +27,7 @@ body, html {
   /* Cantidad de columnas y dimensiones */
   grid-template-columns: repeat(6, 1fr);
   /* Cantidad de filas */
-  grid-template-rows: 10vh 150vh 10vh;
+  grid-template-rows: 10vh 75vh 15vh;
   /* Dimensiones de las calles */
   gap: 1vh;
 }
@@ -63,19 +69,17 @@ body, html {
 
 /* Elementos menú header */
 .nav ul li a {
-  /* Elimina el subrayado de enlace */
   text-decoration: none;
   color: white;
 }
 
 .header {
-  /* Sombra para el header */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .header a:hover {
-  /* Cambia el color al pasar el mouse */
-  color: blue;
+  color: var(--color-bordes);
+  transition: 0.4s ease;
 }
 
 /* Imagen logo del header */
@@ -87,6 +91,11 @@ body, html {
 header ul li:nth-child(1) {
   /* Posicionamiento del elemento 1 */
   grid-column: 1;
+}
+
+.footer {
+  height: 15rem;
+  color: #6f6f6f;
 }
 
 .footer ul {
@@ -164,3 +173,50 @@ header ul li:nth-child(1) {
   display: block; /* Muestra al pasar el ratón */
 }
 
+header ul li:nth-child(1) {
+  /*posicionamiento del elemento 1*/
+  grid-column: 1;
+}
+
+/* CONTACTO PAG PRINCIPAL */
+.contacto_redirect {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.cuerpo-contacto {
+  padding: 0.5rem;
+}
+.titulo-contacto-principal {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cta-contacto {
+  background-color: rgb(64, 154, 161);
+  border: none;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
+.cta-contacto:hover{
+  background-color: #333;
+  transition: 0.5s ease-in-out;
+}
+.cta-contacto a {
+  text-decoration: none;
+}
+.cta-contacto a:visited{
+  color: #fff;
+}
+
+footer ul li:nth-child(1) {
+  /*donde posiciona en el grid?*/
+  grid-column: 2;
+  /*es el número de la columna exacta*/
+}

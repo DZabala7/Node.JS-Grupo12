@@ -1,0 +1,113 @@
+:root {
+    --color-primario: #333;
+    --color-secundario: #ededed;
+    --color-bordes: #0ef;
+    --color-error: #d93025;
+    --color-fpanel: lightgrey;
+    /* --imagen: url('./img/logo.png'); */
+}
+
+/* PANEL VA A CONTENER EL CUADRO CON LA FOTO Y LA INFO DEL JUEGO */
+.center-container {
+    display: flex;
+    align-items: center;
+    height: calc(100vh -10vh -15vh);
+}
+
+.panel-container {
+    /* Tus estilos para .panel-container van aquí */
+    width: 90vw; /* Ajusta el ancho al 90% del ancho de la ventana */
+}
+
+.panel {
+    /* Centra el panel */
+    margin: auto;
+    /* Define el comportamiento del panel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Otros estilos necesarios */
+    width: calc(100% - 10%);
+    height: 100%;
+    background-color: var(--color-fpanel);
+    opacity: 0.90;
+    border: 2px solid var(--color-bordes);
+    border-radius: 6px;
+
+}
+
+.cuadro {
+    margin: 1rem;
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadro img {
+    max-width: 50%; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 50%; /* Ajusta el tamaño máximo de la imagen */
+}
+
+.cuadro p {
+    font-size: 80%;
+}
+
+table {
+    padding: 1em 2em 1em;
+    text-align: justify;
+    align-items: center;
+}
+#item-img {
+   max-width: 200%;
+   align-items: center;
+}
+
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  #form p {
+    text-align: center;
+  }
+  
+  #form label {
+    font-size: 30px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: grey;
+  }
+  
+  .alineacionF{
+    text-align: left;
+  }
+
+  /* Muestra el bloque de la calificación en espejo. por ello se procede a dar las siguientes instrucciones para que la alineación del bloque de texto (estrellas este alineado y se corresponda con lo que se observa) */
+  .calificaciones {
+    /* La propiedad direction se utiliza para indicar en que dirección fluye el bloque de texto. (Las estrellas del formulario se muestran en espejo, por ende, tendre que poner los valores opuestos)*/
+    direction: rtl;     /* Como por defecto es 'ltr', y yo quiero que la dirección fluya de derecha a izquierda, la cambio a 'rtl' */
+    /* En otras palabras, me sirve para que cuando seleccione la calificación, lo haga de DER a IZQ */
+
+    /* Como por defecto, la alinación del bloque estará a la derecha, tengo que forzar que se posicione a la izquierda*/
+    unicode-bidi: bidi-override;   /* La propiedad 'unicode-bidi' permite controlar cómo se debe tratar el bloque */
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
