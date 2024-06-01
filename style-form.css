@@ -245,6 +245,9 @@ form button:hover {
     color: #6f6f6f;
     font-weight: 900;
 }
+.informacion-juego a {
+    text-decoration: none;
+}
 
 #item-0 {
     background-color: #ffffff;

@@ -172,11 +172,6 @@ header ul li:nth-child(1) {
 .juego:hover .card-hover {
   display: block; /* Muestra al pasar el ratón */
 }
-  height: 2rem;
-  /*ajusta el tamaño del logo*/
-  width: auto;
-  /*mantiene la proporción*/
-}
 
 header ul li:nth-child(1) {
   /*posicionamiento del elemento 1*/
@@ -185,6 +180,7 @@ header ul li:nth-child(1) {
 
 /* CONTACTO PAG PRINCIPAL */
 .contacto_redirect {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
